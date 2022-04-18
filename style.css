@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+        :root{
+            --pale-blue: hsl(225, 100%, 94%);
+            --bright-blue: hsl(245, 75%, 52%);
+            --very-pale-blue: hsl(225, 100%, 98%);
+            --desaturated-blue: hsl(224, 23%, 55%);
+            --dark-blue: hsl(223, 47%, 23%);            
+        }
+        body{
+            font-family: 'Red Hat Display', sans-serif;
+            margin: 0;
+            background-color: var(--pale-blue);   
+            font-size: 16px;                
+        }
+        main{
+            min-height: 100vh;                
+            position: relative; 
+            background-image: url(./images/pattern-background-desktop.svg);   
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: grid;
+            place-items: center;
+        }
+        .card{
+            position: absolute;
+            width: 20rem;
+            height: 32rem;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;    
+            -webkit-box-shadow: 4px 6px 25px -14px rgba(0,0,0,0.63); 
+            box-shadow: 4px 6px 25px -14px rgba(0,0,0,0.63);      
+        }
+        h1{
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+        h2{
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.8rem;
+            margin: 0rem 2rem;
+            color: var(--desaturated-blue);
+        }
+        .payment{
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--very-pale-blue);
+            place-items: center;
+            margin: 1rem 2rem;
+            padding: 1rem;
+            border-radius: 12px;
+        }
+        .payment-first-part{
+            display: flex;
+        }
+        .payment a{
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--bright-blue);
+        }
+        .payment a:hover{
+            color: rgb(163, 157, 225);
+            text-decoration: none;
+        }
+        .music-icon{
+            height: 2.2rem;
+            width: 2.2rem;
+            margin-right: 1rem;            
+        }
+        .plan{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan span:first-child{
+            font-weight: 900;
+            font-size: 0.8rem;
+        }
+        .plan span:last-child{
+            font-weight: 500;
+            font-size: 0.8rem;
+            color: var(--desaturated-blue);
+        }
+        .card button{
+            margin: 0.5rem 2rem;
+            border: none;
+            height: 2.3rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            cursor: pointer;
+        }
+        .confirm-payment{
+            background-color: var(--bright-blue);
+            color: white;
+            -webkit-box-shadow: 4px 5px 30px -14px var(--bright-blue); 
+            box-shadow: 4px 5px 30px -10px var(--bright-blue);
+        }
+        .confirm-payment:hover{
+            background-color: rgb(163, 157, 225);            
+        }
+        .cancel-order{
+            background-color: transparent;
+            color: var(--desaturated-blue);
+        }
+        .cancel-order:hover{
+            color: var(--dark-blue); 
+            font-weight: 700;           
+        }
+        footer{
+            position: absolute; 
+            bottom: 0;
+        }
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+
+        @media (max-width: 640px) {
+            main{                                               
+                background-image: url(./images/pattern-background-mobile.svg);  
+            }                 
+        }
